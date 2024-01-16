@@ -1,15 +1,15 @@
 
 import "./App.css";
 
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar";
 
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer";
 
 function App() {
  
   return (
-    <div classname ='App'>
-      <header classname='header'>
+    <div className ='App'>
+      <header className='header'>
         <h1>Welcome to our website!</h1>
         <p>This is a simple web application built using React.</p>
         </header>
