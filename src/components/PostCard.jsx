@@ -1,17 +1,18 @@
-import React from 'react';
-import posts from './posts.js';
+import "./PostCard.css";
+import propTypes from "prop-types";
 
-function Card() {
- return (
-   <div>
-     {posts.map((post) => (
-       <div key={post.id}>
-         <h2>{post.title}</h2>
-         <p>{post.content}</p>
-       </div>
-     ))}
-   </div>
- );
+export default function PostCard(posts) {
+
+  console.log(posts);
+  console.log(Object.keys(posts));
+  return (
+    <article className="card">
+      <img src={posts.posts.sourceUrl} alt={posts.posts.title} />
+      <h2>{posts.posts.title}</h2>
+      <p>{posts.posts.body}</p>
+    </article>
+  );
 }
-
-export default Card;
+PostCard.propTypes = {
+  posts: propTypes.object,
+};
